@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шестерочка - Магазин продуктов</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Магазин Шестерочка</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#products">Продукты</a></li>
+                <li><a href="#other-products">Другие продукты</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#cart">Корзина (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Добро пожаловать в Шестерочку!</h2>
+            <p>У нас вы найдете свежие продукты по доступным ценам.</p>
+        </section>
+
+        <section id="products">
+            <h2>Наши продукты</h2>
+            <div class="product">
+                <img src="milk.jpg" alt="Молоко">
+                <h3>Молоко</h3>
+                <p>Цена: 119 руб.</p>
+                <button onclick="addToCart('Молоко', 119)">Добавить в корзину</button>
+            </div>
+            <div class="product">
+                <img src="bread.jpg" alt="Хлеб">
+                <h3>Хлеб</h3>
+                <p>Цена: 59 руб.</p>
+                <button onclick="addToCart('Хлеб', 59)">Добавить в корзину</button>
+            </div>
+            <div class="product">
+                <img src="cheese.jpg" alt="Сыр">
+                <h3>Сыр</h3>
+                <p>Цена: 299 руб.</p>
+                <button onclick="addToCart('Сыр', 299)">Добавить в корзину</button>
+            </div>
+        </section>
+
+        <section id="other-products">
+            <h2>Другие продукты</h2>
+            <div class="product">
+                <img src="toy.jpg" alt="Игрушка">
+                <h3>Игрушка</h3>
+                <p>Цена: 499 руб.</p>
+                <button onclick="addToCart('Игрушка', 499)">Добавить в корзину</button>
+            </div>
+            <div class="product">
+                <img src="clay.jpg" alt="Пластилин">
+                <h3>Пластилин</h3>
+                <p>Цена: 150 руб.</p>
+                <button onclick="addToCart('Пластилин', 150)">Добавить в корзину</button>
+            </div>
+            <div class="product">
+                <img src="puzzle.jpg" alt="Пазл">
+                <h3>Пазл</h3>
+                <p>Цена: 279 руб.</p>
+                <button onclick="addToCart('Пазл', 279)">Добавить в корзину</button>
+            </div>
+        </section>
+
+        <section id="cart">
+            <h2>Корзина</h2>
+            <div id="cart-items"></div>
+            <p id="cart-total">Итого: 0 руб.</p>
+        </section>
+
+        <section id="about">
+            <h2>О нас</h2>
+            <p>Мы - магазин Шестерочка, ваш надежный партнер в покупке свежих продуктов.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Шестерочка. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
